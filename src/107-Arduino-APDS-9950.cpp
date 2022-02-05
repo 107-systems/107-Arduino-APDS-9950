@@ -44,8 +44,9 @@ bool ArduinoAPDS_9950::begin(bool const use_extended)
     return false;
   }
 
-  if(use_extended == true) _io.write(APDS_9950::Register::APDS_9950_WriteCommandExtendedRange);
-  else _io.write(APDS_9950::Register::APDS_9950_WriteCommandStandardRange);
+  _io.write(APDS_9950::Register::APDS_9950_WTIME, 0xFF);   /* set WTIME to default value */
+  _io.write(APDS_9950::Register::APDS_9950_ATIME, 0xFF);   /* set ATIME to default value */
+  _io.write(APDS_9950::Register::APDS_9950_ENABLE, 0x0F);   /* set WEN, PEN, AEN and PON bit in ENABLE */
 
   return true;
 }
