@@ -39,7 +39,7 @@ bool ArduinoAPDS_9950::begin(bool const use_extended)
 {
   /* Check the CHIP ID if it matches the expected value.
    */
-  if (_io.read(APDS_9950::Register::APDS_9950_ReadCommandRegister) != APDS_9950::ID_EXPECTED_ID) {
+  if (_io.read(APDS_9950::Register::APDS_9950_ID) != APDS_9950::ID_EXPECTED_ID) {
     _error = APDS_9950::Error::ChipId;
     return false;
   }
