@@ -53,7 +53,7 @@ void loop()
 {
   ArduinoAPDS_9950::colorDataRaw color;
   ArduinoAPDS_9950::proximityDataRaw proximity;
-  
+
   apds_9950.get_colorData(&color);
   Serial.print("Clear = ");
   Serial.println(color.clear);
