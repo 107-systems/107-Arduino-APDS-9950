@@ -21,16 +21,27 @@
 
 class ArduinoAPDS_9950
 {
-
 public:
+
+  struct colorDataRaw{
+                 uint16_t clear;
+                 uint16_t red;
+                 uint16_t green;
+                 uint16_t blue;
+                    };
+
+  struct proximityDataRaw{
+                 uint16_t distance;
+                    };
 
   ArduinoAPDS_9950(APDS_9950::I2cWriteFunc write,
                  APDS_9950::I2cReadFunc read,
  //                APDS_9950::DelayFunc delay,
                  uint8_t const i2c_slave_addr);
 
-  bool begin(bool const use_extended);
-  float get_lux();
+  bool begin();
+  void get_colorData(struct colorDataRaw * color);
+  void get_proximityData(struct proximityDataRaw * proximity);
 
   APDS_9950::Error error();
 

@@ -57,6 +57,13 @@ void APDS_9950_Io::read(Register const reg, uint8_t * buf, size_t const bytes)
   _read(_i2c_slave_addr, to_integer(reg), buf, bytes);
 }
 
+uint16_t APDS_9950_Io::read16(Register const reg)
+{
+  uint16_t data = 0;
+  read(reg, (uint8_t *)&data, 2);
+  return data;
+}
+
 void APDS_9950_Io::write(Register const reg, uint8_t const * buf, size_t const bytes)
 {
   _write(_i2c_slave_addr, to_integer(reg), buf, bytes);
