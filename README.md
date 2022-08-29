@@ -9,7 +9,7 @@
 [![Spell Check](https://github.com/107-systems/107-Arduino-APDS-9950/workflows/Spell%20Check/badge.svg)](https://github.com/107-systems/107-Arduino-APDS-9950/actions?workflow=Spell+Check)
 
 <p align="center">
-  <a href="https://github.com/107-systems/107-Arduino-DroneCore"><img src="https://github.com/107-systems/.github/raw/main/logo/viper.jpg" width="40%"></a>
+  <a href="https://github.com/107-systems/viper"><img src="https://github.com/107-systems/.github/raw/main/logo/viper.jpg" width="40%"></a>
 </p>
 
 Arduino library for the Avago / Broadcom [APDS-9950](https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-proximity-sensors/apds-9950) Digital Proximity, RGB and Ambient Light Sensor.
